@@ -1,0 +1,88 @@
+$padding-hor: 8vw;
+$top: 57px;
+@mixin bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.8em $padding-hor;
+    width: 100vw - 2 * $padding-hor;
+    height: 50px;
+    background-color: var(--background-secondary);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin nav {
+    display: flex;
+    align-items: center;
+}
+@keyframes slide {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.svg {
+    aspect-ratio: 1/1;
+    height: 32px;
+    transition: opacity 0.2s;
+    * {
+        fill: var(--text);
+        stroke: var(--text);
+        stroke-miterlimit: 10;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.dbar {
+    @include bar;
+    nav {
+        @include nav;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+        a {
+            transition: opacity 0.2s;
+        }
+        a:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}
+.mbar {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .dbar {
+        display: none;
+    }
+    .mbar {
+        @include bar;
+        nav {
+            @include nav;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: fixed;
+            top: $top;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--background-secondary);
+            animation: slide 0.2s linear forwards;
+            z-index: -1;
+            a {
+                font-size: 2rem;
+                transition: opacity 0.2s;
+            }
+            a:hover {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+        }
+    }
+}

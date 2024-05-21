@@ -1,0 +1,9 @@
+.theme {
+    aspect-ratio: 1/1;
+    height: 2rem;
+    transition: filter 0.2s;
+}
+.theme:hover {
+    cursor: pointer;
+    filter: invert(1);
+}

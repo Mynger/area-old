@@ -1,0 +1,15 @@
+.select {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    background-color: var(--background-secondary);
+    border: none;
+    text-align: center;
+    border: none;
+    appearance: none;
+    transition: opacity 0.2s;
+}
+.select:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}

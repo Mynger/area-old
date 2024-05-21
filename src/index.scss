@@ -1,0 +1,47 @@
+:root {
+    --text: #1a1e1d;
+    --background-primary: #e1e5e4;
+    --background-secondary: #d1d1d1;
+    --primary: #5683ec;
+    --secondary: #3ae9c6;
+    --accent: #bd8eec;
+  }
+  .dark-theme {
+    --text: #e1e5e4;
+    --background-primary: #1a1e1d;
+    --background-secondary: #121414;
+    --primary: #143c99;
+    --secondary: #16c5a2;
+    --accent: #421371;
+  }
+  html {
+    color: var(--text);
+    background-color: var(--background-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 8vw;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+  p, ul, span {
+    font-size: 1.5rem;
+    margin: 1ch 0;
+    line-height: 1.3em;
+  }
+  a, a:visited, a:focus, a:active {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text);
+  }
+  h2  {
+    text-align: center;
+    margin-bottom: 1ch;
+    font-size: 3rem;
+  }
+  h3 {
+    margin: 2ch 0 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+  video {
+    border-radius: 40px;
+  }

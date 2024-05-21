@@ -1,0 +1,45 @@
+.section {
+    margin-top: 100px;
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 5ch;
+        p {
+            width: 50%;
+        }
+        video {
+            width: 50%;
+        }
+    }
+}
+.reverse {
+    p {
+        order: 2;
+    }
+    video {
+        order: 1;
+    }
+}
+@media (orientation: portrait) {
+    .section {
+        article {
+            flex-direction: column;
+            video {
+                width: 100%;
+            }
+            p {
+                width: 100%;
+            }
+        }
+    }
+    .reverse {
+        p {
+            order: 1;
+        }
+        video {
+            order: 2;
+        }
+    }
+}
