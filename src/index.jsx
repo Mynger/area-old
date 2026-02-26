@@ -17,7 +17,7 @@ i18next.t('my.key')
 
 const router = createHashRouter([
   {
-    path: "/area-old",
+    path: "/",
     element: <App />,
     errorElement: <p>Error</p>,
   },
