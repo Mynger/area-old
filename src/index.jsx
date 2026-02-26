@@ -6,7 +6,7 @@ import ThreeD from './pages/threed/threed.jsx'
 import './index.scss'
 import './i18n.js';
 import i18next from './i18n.js'
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createHashRouter, RouterProvider } from "react-router-dom"
 import { useRef } from 'react'
 import Triangles from './pages/twod/triangles/triangles.jsx'
 import Quadrilaterals from './pages/twod/quadrilaterals/quadrilaterals.jsx'
@@ -15,7 +15,7 @@ import Ovals from './pages/twod/ovals/ovals.jsx'
 
 i18next.t('my.key')
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/area-old",
     element: <App />,
