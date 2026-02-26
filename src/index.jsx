@@ -17,7 +17,7 @@ i18next.t('my.key')
 
 const router = createBrowserRouter([
   {
-    path: "/area",
+    path: "/area-old",
     element: <App />,
     errorElement: <p>Error</p>,
   },
